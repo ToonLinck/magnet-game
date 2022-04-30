@@ -7,8 +7,6 @@ public class cursor_script : MonoBehaviour
 
     public GameObject player;
 
-    public float rotSpeed = 5f;
-
     private void Start()
     {
         Cursor.visible = false;
