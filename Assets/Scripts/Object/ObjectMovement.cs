@@ -5,9 +5,11 @@ using UnityEngine;
 public class ObjectMovement : MonoBehaviour
 {
 
+    public int worth, minWorth;
+    
 
 
-    GameObject player;
+    GameObject player, pointCollector, gameController;
 
     CircleCollider2D cc;
     Rigidbody2D rig;
@@ -18,6 +20,9 @@ public class ObjectMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        pointCollector = GameObject.Find("PointController");
+        gameController = GameObject.Find("GameController");
+
 
         rig = gameObject.GetComponent<Rigidbody2D>();
 
@@ -37,10 +42,14 @@ public class ObjectMovement : MonoBehaviour
 
             case 6:
 
-                if (!isMagnet)
+                if (!isMagnet && pointCollector.GetComponent<PointCollector>().GetPoints() >= minWorth)
                 {
 
                     transform.parent = player.transform;
+
+                    pointCollector.GetComponent<PointCollector>().AddPoints(worth);
+
+                    Debug.Log(pointCollector.GetComponent<PointCollector>().GetPoints());
 
                     ConvertToMagnet();
 
@@ -67,6 +76,9 @@ public class ObjectMovement : MonoBehaviour
 
 
         rig.bodyType = RigidbodyType2D.Kinematic;
+
+
+        gameController.GetComponent<GameControllerScript>().addMagnet(gameObject);
 
         isMagnet = true;
     }

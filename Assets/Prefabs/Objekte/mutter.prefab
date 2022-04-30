@@ -134,7 +134,7 @@ PointEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 128
   m_ForceMagnitude: -10
   m_ForceVariation: 0
   m_DistanceScale: 1
@@ -155,3 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d00a65042f0164c9bc493fe1053c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worth: 1
+  minWorth: 0

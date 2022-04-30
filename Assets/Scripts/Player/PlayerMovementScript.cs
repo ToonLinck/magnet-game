@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerMovementScript : MonoBehaviour
 {
 
+
     Rigidbody2D rig;
-    float mvtSpeed;
+    public float mvtSpeed = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,18 +18,12 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        {
+            //Debug.Log("click");
+            Vector2 npos = transform.position + mvtSpeed * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+            rig.MovePosition(npos);
+        }
     }
 
-    private void FixedUpdate()
-    {
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) {
-
-
-            rig.velocity = transform.up * mvtSpeed * Time.deltaTime;
-
-
-        }
-    
-    }   
 }
