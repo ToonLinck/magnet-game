@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2047341349324203246}
   - component: {fileID: 8369980482032998009}
   - component: {fileID: 5822715662262102184}
+  - component: {fileID: -3809823923823211631}
   m_Layer: 7
   m_Name: monitor
   m_TagString: Untagged
@@ -185,3 +186,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40052062, y: 0.06298041}
   m_EdgeRadius: 0
+--- !u!250 &-3809823923823211631
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890118579738448015}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 183
+  m_ForceMagnitude: -10
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 2
+  m_Drag: 0
+  m_AngularDrag: 0
