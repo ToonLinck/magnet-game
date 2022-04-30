@@ -7,7 +7,6 @@ public class GameControllerScript : MonoBehaviour
 
     public GameObject player;
     GameObject pointCollector;
-    public GameObject[] objectPrefabs;
 
     GameObject[] magnets;
 
@@ -29,6 +28,14 @@ public class GameControllerScript : MonoBehaviour
     {
         
     }
+
+
+
+
+
+
+
+
 
     public void addMagnet(GameObject nMagnet)
     {
@@ -63,7 +70,6 @@ public class GameControllerScript : MonoBehaviour
 
         }
 
-        Debug.Log(nMask);
 
     }
 
