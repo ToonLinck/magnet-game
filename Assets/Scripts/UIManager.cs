@@ -61,5 +61,15 @@ public class UIManager : MonoBehaviour
             CreditsMenu.enabled = false;
         }
     }
+
+    public void OpenURL()
+    {
+        Application.OpenURL("https://www.1001fonts.com/sf-atarian-system-font.html");
+    }
+
+    public void HighscoreDisplay()
+    {
+
+    }
 }
 
