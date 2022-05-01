@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5185957296686415855}
   - component: {fileID: 5356201888487734348}
   - component: {fileID: 4228042436299485004}
-  - component: {fileID: 3762383971398042271}
   - component: {fileID: 3031163301052552499}
   m_Layer: 7
   m_Name: loeffel
@@ -160,26 +159,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.12734756, y: 0.10548633}
   m_EdgeRadius: 0
---- !u!250 &3762383971398042271
-PointEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362377851716091988}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ForceMagnitude: -10
-  m_ForceVariation: 0
-  m_DistanceScale: 1
-  m_ForceSource: 0
-  m_ForceTarget: 0
-  m_ForceMode: 2
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!114 &3031163301052552499
 MonoBehaviour:
   m_ObjectHideFlags: 0

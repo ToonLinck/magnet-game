@@ -66,7 +66,9 @@ public class GameControllerScript : MonoBehaviour
         foreach (GameObject i in magnets)
         {
 
-            i.GetComponent<PointEffector2D>().colliderMask = nMask;
+            if(i == player) { i.GetComponent<PointEffector2D>().colliderMask = nMask; return; }
+
+            i.transform.GetChild(0).GetComponent<PointEffector2D>().colliderMask = nMask;
 
         }
 
@@ -76,21 +78,23 @@ public class GameControllerScript : MonoBehaviour
     LayerMask GetLayerMask()
     {
 
+        int[] reqs = pointCollector.GetComponent<PointCollector>().GetPointReqs();
+
         int points = pointCollector.GetComponent<PointCollector>().GetPoints();
 
-        if (points < 5)
+        if (points < reqs[0])
         {
 
             return LayerMask.GetMask("ObjectsSM");
 
         }
-        else if (points < 10)
+        else if (points < reqs[1])
         {
 
             return LayerMask.GetMask("ObjectsSM","ObjectsM");
 
         }
-        else if (points < 25)
+        else if (points < reqs[2])
         {
 
             return LayerMask.GetMask("ObjectsSM", "ObjectsM", "ObjectsL");
@@ -104,5 +108,27 @@ public class GameControllerScript : MonoBehaviour
         }
 
     }
+
+
+    public void DeleteSMCollider()
+    {
+
+
+        foreach (GameObject magnet in magnets)
+        {
+
+            if (magnet == player) {Debug.Log("Object was player"); return; }
+
+            if (magnet.GetComponent<ObjectMovement>().GetMinWorth() == 0)
+            {
+
+                Destroy(magnet.transform.GetChild(0).GetComponent<CircleCollider2D>());
+
+            }
+
+        } 
+
+    }
+
 
 }

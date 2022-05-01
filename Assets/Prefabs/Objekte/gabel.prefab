@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3604657026761296395}
   - component: {fileID: 4177982127535465801}
   - component: {fileID: 7866615797798138783}
-  - component: {fileID: -2249665912514184942}
   - component: {fileID: -1904168543524826369}
   m_Layer: 7
   m_Name: gabel
@@ -160,26 +159,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.107816145, y: 0.106410384}
   m_EdgeRadius: 0
---- !u!250 &-2249665912514184942
-PointEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5332796040765745915}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ForceMagnitude: -10
-  m_ForceVariation: 0
-  m_DistanceScale: 1
-  m_ForceSource: 0
-  m_ForceTarget: 0
-  m_ForceMode: 2
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!114 &-1904168543524826369
 MonoBehaviour:
   m_ObjectHideFlags: 0

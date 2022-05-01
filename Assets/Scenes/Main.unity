@@ -166,6 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7321fe00dc74a084cadacc6fce544cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 1436040769}
+  cam: {fileID: 519420031}
+  pointsReq: 0a0000005000000096000000
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +236,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.052933
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -349,7 +352,7 @@ MonoBehaviour:
   - {fileID: 7201823654002584236, guid: a17afa5b9c2039442b9d70f6bb48ef95, type: 3}
   - {fileID: 3571927753628354517, guid: a9a382ac7896a7642bb1f876f53a72c7, type: 3}
   spawnRadius: 100
-  spawnAmount: 500
+  spawnAmount: 4000
 --- !u!1 &1084290959
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5805e21c203d6244a41f642b29a090a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 5
+  rotSpeed: 1
   cursor: {fileID: 1084290959}
 --- !u!50 &1229194428
 Rigidbody2D:
@@ -581,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdecd3003987504e9894555d7125cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mvtSpeed: 0.008
+  mvtSpeed: 0.005
 --- !u!250 &1229194430
 PointEffector2D:
   m_ObjectHideFlags: 0

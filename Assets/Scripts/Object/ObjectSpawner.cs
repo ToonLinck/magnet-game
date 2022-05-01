@@ -38,9 +38,7 @@ public class ObjectSpawner : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
-            Vector2 point = new Vector2(Random.Range(-spawnRadius, spawnRadius), Random.Range(-spawnRadius, spawnRadius));
-
-            Debug.Log(point);
+            Vector3 point = new Vector3(Random.Range(-spawnRadius, spawnRadius), Random.Range(-spawnRadius, spawnRadius),0);
 
             while(!isInsideSpawnradius(point))
             {
@@ -49,9 +47,10 @@ public class ObjectSpawner : MonoBehaviour
 
             }
 
-            GameObject prefab = Instantiate(objectPrefabs[Random.Range(0, objectPrefabs.Length - 1)]) as GameObject;
+            GameObject prefab = Instantiate(objectPrefabs[Random.Range(0, objectPrefabs.Length)]) as GameObject;
 
             prefab.transform.position = point;
+            prefab.GetComponent<Rigidbody2D>().rotation = Random.Range(0,359);
 
            // Debug.Log("instantiated Object at " + prefab.transform.position);
 

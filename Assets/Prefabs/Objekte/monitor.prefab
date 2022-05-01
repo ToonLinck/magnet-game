@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2047341349324203246}
   - component: {fileID: 8369980482032998009}
   - component: {fileID: 5822715662262102184}
-  - component: {fileID: -3809823923823211631}
   - component: {fileID: -8591993041993970251}
   m_Layer: 9
   m_Name: monitor
@@ -32,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2890118579738448015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.468, y: -0.388, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -187,26 +186,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40052062, y: 0.06298041}
   m_EdgeRadius: 0
---- !u!250 &-3809823923823211631
-PointEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2890118579738448015}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ForceMagnitude: -15
-  m_ForceVariation: 0
-  m_DistanceScale: 1
-  m_ForceSource: 0
-  m_ForceTarget: 0
-  m_ForceMode: 2
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!114 &-8591993041993970251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,5 +198,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d00a65042f0164c9bc493fe1053c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worth: 10
-  minWorth: 10
+  worth: 7
+  minWorth: 80

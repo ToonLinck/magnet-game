@@ -12,7 +12,8 @@ public class ObjectMovement : MonoBehaviour
     GameObject player, pointCollector, gameController;
 
     CircleCollider2D cc;
-    Rigidbody2D rig;
+    PointEffector2D pe;
+    Rigidbody2D rig, preRig;
 
     bool isMagnet = false;
 
@@ -49,8 +50,6 @@ public class ObjectMovement : MonoBehaviour
 
                     pointCollector.GetComponent<PointCollector>().AddPoints(worth);
 
-                    Debug.Log(pointCollector.GetComponent<PointCollector>().GetPoints());
-
                     ConvertToMagnet();
 
                 }
@@ -68,14 +67,43 @@ public class ObjectMovement : MonoBehaviour
 
         gameObject.layer = 6;
 
-        cc = gameObject.AddComponent(typeof(CircleCollider2D)) as CircleCollider2D;
 
+
+
+
+        GameObject prefabChild = new GameObject();
+
+        prefabChild.name = "magnet Collider";
+        prefabChild.layer = 6;
+
+        prefabChild.transform.parent = gameObject.transform;
+
+        cc = prefabChild.AddComponent(typeof(CircleCollider2D)) as CircleCollider2D;
+
+        cc.name = "GravityRadius";
         cc.radius = 4;
         cc.isTrigger = true;
         cc.usedByEffector = true;
 
 
+        pe = prefabChild.AddComponent(typeof(PointEffector2D)) as PointEffector2D;
+
+        pe.forceMode = EffectorForceMode2D.InverseSquared;
+        pe.useColliderMask = true;
+        pe.colliderMask = LayerMask.GetMask("ObjectsSM");
+
+        preRig = prefabChild.AddComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+
+        preRig.gravityScale = 0;
+        preRig.bodyType = RigidbodyType2D.Kinematic;
+
+        prefabChild.transform.position = gameObject.transform.position;
+
+
         rig.bodyType = RigidbodyType2D.Kinematic;
+        rig.isKinematic = true;
+        rig.velocity = Vector2.zero;
+        rig.freezeRotation = true;
 
 
         gameController.GetComponent<GameControllerScript>().addMagnet(gameObject);
@@ -83,5 +111,12 @@ public class ObjectMovement : MonoBehaviour
         isMagnet = true;
     }
 
+
+    public int GetMinWorth()
+    {
+
+        return minWorth;
+
+    }
 
 }
