@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class Timer : MonoBehaviour
 {
-    public float timeElapsed = 0;
+    public float timeElapsed = 0f;
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
     public GameObject points;
@@ -29,6 +29,8 @@ public class Timer : MonoBehaviour
         else
         {
             timerIsRunning = false;
+            PlayerPrefs.SetFloat("Highscore_raw",timeElapsed);
+            PlayerPrefs.Save();
             points.GetComponent<PointCollector>().FinishGame();
         }
     }

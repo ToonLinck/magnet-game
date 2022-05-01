@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -67,9 +68,10 @@ public class UIManager : MonoBehaviour
         Application.OpenURL("https://www.1001fonts.com/sf-atarian-system-font.html");
     }
 
-    public void HighscoreDisplay()
+    public void Delete()
     {
-
+        PlayerPrefs.DeleteKey("Highscore_raw");
     }
+
 }
 
