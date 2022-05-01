@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 1436040769}
+  cursor: {fileID: 1084290959}
   cam: {fileID: 519420031}
   pointsReq: 0a0000005000000096000000
 --- !u!1 &519420028

@@ -68,7 +68,7 @@ public class GameControllerScript : MonoBehaviour
 
             if(i == player) { i.GetComponent<PointEffector2D>().colliderMask = nMask; return; }
 
-            i.transform.GetChild(0).GetComponent<PointEffector2D>().colliderMask = nMask;
+            i.transform.GetChild(0).gameObject.GetComponent<PointEffector2D>().colliderMask = nMask;
 
         }
 

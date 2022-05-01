@@ -8,7 +8,7 @@ public class PointCollector : MonoBehaviour
 
     int points;
 
-    public GameObject gameController;
+    public GameObject gameController, cursor;
 
     public Camera cam;
 
@@ -56,6 +56,8 @@ public class PointCollector : MonoBehaviour
         {
 
             cam.orthographicSize += cam.orthographicSize * 0.1f;
+
+            cursor.transform.localScale = new Vector3(cursor.transform.localScale.x * 1.1f, cursor.transform.localScale.y * 1.1f, 1);
 
             currentCamLevel++;
 
