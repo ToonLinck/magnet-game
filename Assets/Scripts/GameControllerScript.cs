@@ -66,11 +66,17 @@ public class GameControllerScript : MonoBehaviour
         foreach (GameObject i in magnets)
         {
 
-            if(i == player) { i.GetComponent<PointEffector2D>().colliderMask = nMask; return; }
+            if (i == player) { i.GetComponent<PointEffector2D>().colliderMask = nMask; }
+            else if (i.transform.GetChild(0).gameObject.GetComponent<PointEffector2D>() != null)
+            {
 
-            i.transform.GetChild(0).gameObject.GetComponent<PointEffector2D>().colliderMask = nMask;
+                i.transform.GetChild(0).gameObject.GetComponent<PointEffector2D>().colliderMask = nMask;
+
+            }
 
         }
+
+        Debug.Log("layermask updated");
 
 
     }

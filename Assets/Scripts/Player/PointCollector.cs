@@ -53,7 +53,7 @@ public class PointCollector : MonoBehaviour
     void CheckCameraZoom()
     {
 
-        if (points >= currentReq && currentCamLevel <= 2)
+        if (points >= currentReq && currentCamLevel < 2)
         {
 
             cam.orthographicSize += cam.orthographicSize * 0.1f;
@@ -64,7 +64,9 @@ public class PointCollector : MonoBehaviour
 
             if (points >= pointsReq[1]) { gameController.GetComponent<GameControllerScript>().DeleteSMCollider(); }
 
-            currentReq = pointsReq[currentCamLevel];
+            if (currentCamLevel <= 2) { currentReq = pointsReq[currentCamLevel]; }
+            
+
 
         }
       
