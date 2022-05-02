@@ -83,7 +83,12 @@ public class UIManager : MonoBehaviour
     }
 
 
-    public void DeleteHighscore() { }
+    public void DeleteHighscore()
+    {
+        PlayerPrefs.DeleteKey("Highscore_raw");
+        reset.ResetOldHighscore();
+
+    }
 
     public void OpenURLMusic()
     {
@@ -97,15 +102,6 @@ public class UIManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("MouseClick");
 
         Application.OpenURL("https://redskiesofficial.newgrounds.com");
-    }
-
-    public void Delete()
-    {
-        FindObjectOfType<AudioManager>().Play("MouseClick");
-
-        PlayerPrefs.DeleteKey("Highscore_raw");
-        reset.ResetOldHighscore();
-        
     }
 
 }

@@ -7,7 +7,7 @@ public class Quit_Game : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKey("escape"))
+        if (Input.GetKey("m"))
         {
             SceneManager.LoadScene("Menu");
             Cursor.visible = true;
