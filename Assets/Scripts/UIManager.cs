@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public bool a = false;
     public bool b = false;
     public bool c = false;
+    public SetHighscore reset;
     public void StartGame() //Starts the game
     {
         SceneManager.LoadScene("Main");
@@ -68,9 +69,11 @@ public class UIManager : MonoBehaviour
         Application.OpenURL("https://www.1001fonts.com/sf-atarian-system-font.html");
     }
 
-    public void Delete()
+    public void DeleteHighscore()
     {
         PlayerPrefs.DeleteKey("Highscore_raw");
+        reset.ResetOldHighscore();
+        
     }
 
 }

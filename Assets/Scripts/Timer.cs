@@ -30,6 +30,14 @@ public class Timer : MonoBehaviour
         {
             timerIsRunning = false;
             PlayerPrefs.SetFloat("Highscore_raw",timeElapsed);
+            if (PlayerPrefs.GetFloat("highscoreOld") == 0)
+            {
+                PlayerPrefs.SetFloat("highscoreOld", timeElapsed);
+            }
+            if (PlayerPrefs.GetFloat("Highscore_raw") < PlayerPrefs.GetFloat("highscoreOld"))
+            {
+                PlayerPrefs.SetFloat("highscoreOld", timeElapsed);
+            }
             PlayerPrefs.Save();
             points.GetComponent<PointCollector>().FinishGame();
         }
