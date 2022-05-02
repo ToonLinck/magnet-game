@@ -85,6 +85,7 @@ public class UIManager : MonoBehaviour
 
     public void DeleteHighscore()
     {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
         PlayerPrefs.DeleteKey("Highscore_raw");
         reset.ResetOldHighscore();
 

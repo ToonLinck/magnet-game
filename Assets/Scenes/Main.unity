@@ -1064,7 +1064,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BG
     clip: {fileID: 8300000, guid: f8ea35374d6657045b339b2334e8b9ad, type: 3}
-    volume: 0.2
+    volume: 0.05
     pitch: 1
     loop: 1
     source: {fileID: 0}
