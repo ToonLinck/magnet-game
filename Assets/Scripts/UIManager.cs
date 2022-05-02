@@ -82,9 +82,9 @@ public class UIManager : MonoBehaviour
         Application.OpenURL("https://www.1001fonts.com/sf-atarian-system-font.html");
     }
 
-<<<<<<< Updated upstream
-    public void DeleteHighscore()
-=======
+
+    public void DeleteHighscore() { }
+
     public void OpenURLMusic()
     {
         FindObjectOfType<AudioManager>().Play("MouseClick");
@@ -100,7 +100,6 @@ public class UIManager : MonoBehaviour
     }
 
     public void Delete()
->>>>>>> Stashed changes
     {
         FindObjectOfType<AudioManager>().Play("MouseClick");
 
