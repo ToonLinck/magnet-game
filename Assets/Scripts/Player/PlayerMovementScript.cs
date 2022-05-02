@@ -11,14 +11,11 @@ public class PlayerMovementScript : MonoBehaviour
 
     // Start is called before the first frame update
 
-    private void Awake()
-    {
-        FindObjectOfType<AudioManager>().Play("BG");
-    }
 
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("BG");
         rig = gameObject.GetComponent<Rigidbody2D>();
     }
 

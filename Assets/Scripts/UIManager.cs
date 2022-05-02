@@ -15,15 +15,21 @@ public class UIManager : MonoBehaviour
     public SetHighscore reset;
     public void StartGame() //Starts the game
     {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
+
         SceneManager.LoadScene("Main");
     }
     public void QuitGame() //Quits the game
     {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
+
         Application.Quit();
     }
 
     public void TutorialPopup() //Tutorial Page
     {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
+
         if (a == false)
         {
             a = true;
@@ -38,6 +44,8 @@ public class UIManager : MonoBehaviour
 
     public void HighscoresPopup() //Highscores Page
     {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
+
         if (b == false)
         {
             b = true;
@@ -52,25 +60,50 @@ public class UIManager : MonoBehaviour
 
     public void CreditsPopup() //Credits Page
     {
+
         if (c == false)
         {
+            FindObjectOfType<AudioManager>().Play("MouseClick");
             c = true;
             CreditsMenu.enabled = true;
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play("Discord");
             c = false;
             CreditsMenu.enabled = false;
         }
     }
 
-    public void OpenURL()
+    public void OpenURLFont()
     {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
+
         Application.OpenURL("https://www.1001fonts.com/sf-atarian-system-font.html");
     }
 
+<<<<<<< Updated upstream
     public void DeleteHighscore()
+=======
+    public void OpenURLMusic()
     {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
+
+        Application.OpenURL("https://www.newgrounds.com/audio/listen/997795l");
+    }
+
+    public void OpenURLGregor()
+    {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
+
+        Application.OpenURL("https://redskiesofficial.newgrounds.com");
+    }
+
+    public void Delete()
+>>>>>>> Stashed changes
+    {
+        FindObjectOfType<AudioManager>().Play("MouseClick");
+
         PlayerPrefs.DeleteKey("Highscore_raw");
         reset.ResetOldHighscore();
         
