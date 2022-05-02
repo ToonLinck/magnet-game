@@ -16,7 +16,7 @@ public class cursor_script : MonoBehaviour
     {
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        transform.position = cursorPos;
+        transform.position = new Vector3(cursorPos.x, cursorPos.y, -5) ;
 
         Vector3 vectorToTarget = player.transform.position - transform.position;
         float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;

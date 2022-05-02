@@ -43,7 +43,7 @@ public class ObjectSpawner : MonoBehaviour
             while(!isInsideSpawnradius(point))
             {
 
-                point = new Vector2(Random.Range(-spawnRadius, spawnRadius), Random.Range(-spawnRadius, spawnRadius));
+                point = new Vector3(Random.Range(-spawnRadius, spawnRadius), Random.Range(-spawnRadius, spawnRadius),0);
 
             }
 
