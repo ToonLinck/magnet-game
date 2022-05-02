@@ -27,10 +27,8 @@ public class PointCollector : MonoBehaviour
 
     public void FinishGame()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Game_over");
         Cursor.visible = true;
-
-
     }
 
 
