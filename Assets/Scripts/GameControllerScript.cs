@@ -76,7 +76,6 @@ public class GameControllerScript : MonoBehaviour
 
         }
 
-        Debug.Log("layermask updated");
 
 
     }

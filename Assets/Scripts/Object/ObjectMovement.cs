@@ -9,7 +9,7 @@ public class ObjectMovement : MonoBehaviour
     
 
 
-    GameObject player, pointCollector, gameController;
+    GameObject player, pointCollector, gameController, audioController;
 
     CircleCollider2D cc;
     PointEffector2D pe;
@@ -107,6 +107,8 @@ public class ObjectMovement : MonoBehaviour
 
 
         gameController.GetComponent<GameControllerScript>().addMagnet(gameObject);
+
+        FindObjectOfType<AudioManager>().Play("Snap");
 
         isMagnet = true;
     }

@@ -10,6 +10,13 @@ public class PlayerMovementScript : MonoBehaviour
     public float mvtSpeed = 0.2f;
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        FindObjectOfType<AudioManager>().Play("BG");
+    }
+
+
     void Start()
     {
         rig = gameObject.GetComponent<Rigidbody2D>();
